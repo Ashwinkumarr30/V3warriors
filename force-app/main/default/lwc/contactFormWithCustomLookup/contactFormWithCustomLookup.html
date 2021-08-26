@@ -1,0 +1,17 @@
+<template>  
+    <lightning-card title={title} icon-name="standard:record">  
+      <div class="slds-m-around_medium">  
+        <lightning-layout horizontal-align="stretch">  
+          <lightning-layout-item flexibility="auto" style="padding-left: 0.75rem;">  
+            <c-lookup-search label="Custom Lookup - Account" selectedsobject="Account"
+              onlookupselect={handlelookupselectaccount}></c-lookup-search>  
+          </lightning-layout-item>  
+          <lightning-layout-item flexibility="auto" style="padding-left: 0.75rem;margin-top: 37px;">  
+            Please start typing Account name in a box.  
+          </lightning-layout-item>  
+        </lightning-layout>  
+        <c-create-contact-form oncontactsuccess={contactCreateSuccess} account-record={selectedAccountRecord}  
+          event-record-id={eventRecordId} oncontactcancel={contactCancel}></c-create-contact-form>  
+      </div>  
+    </lightning-card>  
+  </template>  

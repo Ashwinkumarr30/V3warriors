@@ -1,0 +1,20 @@
+<template>  
+    <lightning-card title="Custom Lookup - Account" icon-name="custom:custom57">  
+      <c-lookup-search label="Custom Lookup - Account" selectedsobject="Account"   
+        recordlimit="10"    
+        onlookupselect={handlelookupselectaccount}></c-lookup-search>  
+      <template if:true={selectedAccountRecord}>  
+        <p>SELECTED RECORD ID : {selectedAccountRecord.Id}</p>  
+        <p>SELECTED RECORD VALUE : {selectedAccountRecord.Name}</p>  
+      </template>  
+    </lightning-card>  
+    <lightning-card title="Custom Lookup - Contact" icon-name="custom:custom57">  
+      <c-lookup-search label="Contact" selectedsobject="Contact" recordlimit="10"  
+         onlookupselect={handlelookupselectcontact}>  
+      </c-lookup-search>  
+      <template if:true={selectedContactRecord}>  
+        <p>SELECTED RECORD ID : {selectedContactRecord.Id}</p>  
+        <p>SELECTED RECORD VALUE : {selectedContactRecord.Name}</p>  
+      </template>  
+    </lightning-card>  
+  </template>  
