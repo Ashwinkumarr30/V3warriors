@@ -1,0 +1,19 @@
+<template>
+     <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={options}
+                          value={value}
+                          type="radio"></lightning-radio-group>
+    <lightning-button label="Contacts" onclick={getContacts}>
+    </lightning-button>
+    <template if:true={wiredContacts.data}>
+        <template for:each={wiredContacts.data} for:item="contact">
+            <li key={contact.Id}>
+                {contact.Name}, {contact.Email}
+            </li>
+        </template>
+    </template>
+    <template if:true={wiredContacts.error}>
+        {wiredContacts.error}
+    </template>
+</template>

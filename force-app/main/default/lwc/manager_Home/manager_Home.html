@@ -1,0 +1,89 @@
+<template>          
+    <lightning-tabset class="end-icon-alternative-text">
+<lightning-tab label="Guides and Explorer">
+    <span>
+        <div class="slds-p-around_medium lgc-bg"><br/>
+            <template if:true={wiredContacts1.data}></template>
+            <template for:each={wiredContacts1.data} for:item="User"></template>
+        <lightning-tile  label="" href="" type="media">
+            <lightning-avatar  size="large" slot="media" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Aditya Gatt"></lightning-avatar>
+        </lightning-tile><br/>
+        <lightning-button icon-name="utility:trailhead_alt" class="slds-m-right_small" label="View Explorers" slot="actions" ></lightning-button> 
+        <template if:true={wiredContacts1.error}>
+            {wiredContacts.error}
+        </template>
+        </div>
+    <template if:true={wiredContacts1.data}>
+        <template for:each={wiredContacts1.data} for:item="User">
+                <p key={User.id}>
+                    {User.Name}
+               </p>
+
+        </template>
+    </template>
+
+</span>
+           </lightning-tab>
+            <lightning-tab label="User Enrollment">
+                <div class="slds-p-around_large">
+                    <div class="slds-form-element">
+                        <div class="slds-text-heading_medium ">User Details</div>
+                    </div>
+                    
+                    <label class="slds-form-element__label" for="text-input-id-1">Name</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="standard:user"></lightning-icon>
+                        <input type="text" id="text-input-id-1" placeholder="Search Employee" class="slds-input"  />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-2">Role</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="standard:user"></lightning-icon>
+                        <input type="text" id="text-input-id-2" placeholder="Search role" class="slds-input" />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-3">Guide</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="standard:user"></lightning-icon>
+                        <input type="text" id="text-input-id-3" placeholder="Search Guide" class="slds-input" />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-4">Onboarding Start Date</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" ></lightning-icon>
+                        <input type="date" id="text-input-id-4"  class="slds-input" />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-5">Onboarding End Date</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" ></lightning-icon>
+                        <input type="date" id="text-input-id-5"  class="slds-input" />
+                    </div>
+                </div>
+                 <div >
+                 <lightning-card> 
+            <lightning-button icon-name="utility:add" class="slds-m-right_small" label="Add Step" slot="actions" ></lightning-button> 
+            </lightning-card>
+        </div> 
+        
+    </lightning-tab>
+<lightning-tab label="Trail Setup">
+    <span>
+        <label class="slds-form-element__label" for="text-input-id-t1">Trail Name(s)</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="utility:trailhead"></lightning-icon>
+                        <input type="text" id="text-input-id-t1" placeholder="Search Trails" class="slds-input"  />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-t2">Role</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="standard:user"></lightning-icon>
+                        <input type="text" id="text-input-id-t2" placeholder="Search role" class="slds-input" />
+                    </div>
+                    <label class="slds-form-element__label" for="text-input-id-t3">Description</label>
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="standard:user"></lightning-icon>
+                        <input type="text" id="text-input-id-t3" placeholder="Description" class="slds-input" />
+                    </div>
+    </span>
+</lightning-tab>
+
+
+</lightning-tabset>
+
+</template>

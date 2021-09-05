@@ -1,0 +1,14 @@
+<template>
+                <template if:true={accounts.data}>
+                    <!--<template for:each={accounts.data} for:item="acc">-->
+                        <lightning-datatable 
+                        key-field="accounts.data.Id"
+                        columns={accounts.data.Name}
+            data={accounts.data}
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}>
+                        </lightning-datatable>
+                    </template>
+                </template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title = "Task Assignment"
+        icon-name="standard:task">
+        <div class="slds-m-around_small">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                layout-type="Full"
+                columns="2"
+                mode="Edit"
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+            <lightning-button label="send data" onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="ApexStaticSchema" icon-name="custom:custom63">
+        <template if:true={task.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

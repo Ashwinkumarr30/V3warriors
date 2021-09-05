@@ -1,0 +1,37 @@
+<template>
+    <lightning-card>
+    <lightning-tabset variant="scoped"    >
+    <lightning-tab label="User Enrollment">
+    <lightning-card title='User Enrollment'
+    icon-name="custom:custom103">
+    <div class="slds-m-around_small">
+        
+        <lightning-record-form       
+            object-api-name={objectApiName}
+            layout-type="Full"
+            columns="2"
+            mode="edit"
+            onsuccess={handleSuccess}
+        >
+        </lightning-record-form>
+    </div>
+    </lightning-card>
+</lightning-tab>
+<lightning-tab label="Task Assignment">
+    <lightning-card title = "Task Assignment"
+        icon-name="standard:task">
+        <div class="slds-m-around_small">
+            <lightning-record-form
+                object-api-name={objectApiName1}
+                fields={fields}
+                layout-type="Full"
+                columns="2"
+                mode="Edit"
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</lightning-tab>
+</lightning-tabset>
+</lightning-card>
+</template>

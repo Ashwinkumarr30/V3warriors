@@ -3,13 +3,13 @@
             <div class="slds-m-around_medium">
                 <template if:true={accounts.data}>
                     <template for:each={accounts.data} for:item="acc">
-                        <p key={acc.Id}>{acc.Name}</p>
+                        <p  key={acc.Id}>Task Name :     {acc.Name}<br></p> 
                         
-                        <p key={acc.Id}>{acc.Comments__c}</p>
+                        <p key={acc.Id}>Comments :       {acc.Comments__c}<br></p>
                         
-                        <p key={acc.Id}>{acc.Status__c}</p>
+                        <p key={acc.Id}>Status :         {acc.Status__c}<br></p>
 
-                        <p key={acc.Id}>{acc.Employee__r.Name}</p>
+                        <p key={acc.Id}>Employee Name :  {acc.Employee__r.Name}<br></p>
                     
                     </template>
                 </template>

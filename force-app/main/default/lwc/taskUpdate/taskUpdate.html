@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title={bear.Name} class="bear-tile" icon-name="standard:task" >
+        <div class="slds-p-horizontal_small" style="width:30rem">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                  
+                </div>
+                <div class="slds-media__body" >
+                    <p class="slds-m-bottom_xx-small"><strong>Status</strong> : {bear.Status__c}</p>
+                    
+                              
+                    
+                </div>
+            </div>
+        </div>
+        <lightning-button name="Update Name" label="Mark as Complete" onclick={updateAccount}>
+        </lightning-button>
+        </lightning-card>
+    </template>

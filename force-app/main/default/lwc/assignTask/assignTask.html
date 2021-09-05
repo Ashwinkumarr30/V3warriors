@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = "Task Assignment"
+        icon-name="standard:task">
+        <div class="slds-m-around_small">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                layout-type="Full"
+                columns="2"
+                mode="Edit"
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
