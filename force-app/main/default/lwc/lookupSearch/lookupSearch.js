@@ -15,7 +15,7 @@ import { LightningElement, track, api, wire} from 'lwc';
    @wire(getLookupSerachRecords, { searchString: '$searchString' , selectedSObject : '$selectedsobject', recordLimit : '$recordlimit'})  
    wiredContacts({ error, data }) {  
      this.noRecordsFlag = 0;  
-     if (data) {  
+     if (data) {   
        this.records = data;  
        this.error = undefined;  
        this.noRecordsFlag = this.records.length === 0 ? true : false;  
